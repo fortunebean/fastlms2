@@ -14,14 +14,21 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 
-@RestController
+@RestController("/")
 public class MainPage {
 
 
     @RequestMapping("/")
-    public void index(){
+    public String index(){
 
         return "Index Page";
+
+    }
+    @RequestMapping("/hello")
+    public String hello(){
+
+        String msg="hello \r\n fastlms website !!!!";
+            return msg;
 
     }
 }
