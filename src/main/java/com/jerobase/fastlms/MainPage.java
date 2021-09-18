@@ -10,5 +10,18 @@ package com.jerobase.fastlms;
 //http://localhost:8080/
 
 
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+
+@RestController
 public class MainPage {
+
+
+    @RequestMapping("/")
+    public void index(){
+
+        return "Index Page";
+
+    }
 }
